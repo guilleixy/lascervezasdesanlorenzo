@@ -94,7 +94,7 @@ export default function EntryClient({
         }}
         className="space-y-2 border-t pt-4"
       >
-        <h2 className="text-xl font-semibold">➕ Añadir tiempo</h2>
+        <h2 className="text-xl font-semibold">Añadir tiempo</h2>
         <input
           type="text"
           name="name"
@@ -119,7 +119,7 @@ export default function EntryClient({
         </select>
         <button
           type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded"
+          className="bg-orange-600 text-white px-4 py-2 rounded"
         >
           Guardar
         </button>

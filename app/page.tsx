@@ -4,8 +4,10 @@ import EntryClient from "@/components/EntryClient";
 export default async function Page({ searchParams }: any) {
   const sql = neon(process.env.DATABASE_URL!);
 
-  const name = searchParams?.name;
-  const category = searchParams?.category;
+  const params = await searchParams;
+
+  const name = params.name;
+  const category = params.category;
 
   let query = "SELECT * FROM entries";
   const values: any[] = [];
@@ -31,7 +33,7 @@ export default async function Page({ searchParams }: any) {
 
   return (
     <main className="p-4">
-      <h1 className="text-2xl font-bold mb-4">🏆 Tiempos de bebida</h1>
+      <h1 className="text-2xl font-bold mb-4">Las cervezas de San Lorenzo</h1>
       <EntryClient initialEntries={entries} />
     </main>
   );
