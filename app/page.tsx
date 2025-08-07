@@ -1,12 +1,14 @@
-// app/page.tsx
 import { neon } from "@neondatabase/serverless";
 import EntryClient from "@/components/EntryClient";
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams?: { name?: string; category?: string };
-}) {
+type PageProps = {
+  searchParams?: {
+    name?: string;
+    category?: string;
+  };
+};
+
+export default async function Page({ searchParams }: PageProps) {
   const sql = neon(process.env.DATABASE_URL!);
 
   const name = searchParams?.name;
@@ -31,7 +33,8 @@ export default async function Page({
   }
 
   query += " ORDER BY time ASC";
-  const entries = await sql.query(query, values);
+
+  const entries = await sql.query(query, values); // ⚠️ usa `.query`
 
   return (
     <main className="p-4">
