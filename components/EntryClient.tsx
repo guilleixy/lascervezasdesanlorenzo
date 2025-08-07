@@ -4,7 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState, useTransition } from "react";
 import { createEntry } from "@/lib/actions";
 
-const categories = ["cerveza 1L"];
+const categories = ["Cerveza 0.33L"];
 
 export default function EntryClient({
   initialEntries,
