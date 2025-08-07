@@ -1,14 +1,7 @@
 import { neon } from "@neondatabase/serverless";
 import EntryClient from "@/components/EntryClient";
 
-type PageProps = {
-  searchParams?: {
-    name?: string;
-    category?: string;
-  };
-};
-
-export default async function Page({ searchParams }: PageProps) {
+export default async function Page({ searchParams }: any) {
   const sql = neon(process.env.DATABASE_URL!);
 
   const name = searchParams?.name;
