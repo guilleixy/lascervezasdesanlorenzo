@@ -106,6 +106,7 @@ export default function EntryClient({
           type="number"
           name="time"
           step="0.01"
+inputmode="decimal"
           placeholder="Tiempo (segundos)"
           required
           className="block border p-2 rounded w-full"
