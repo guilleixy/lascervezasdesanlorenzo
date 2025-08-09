@@ -108,7 +108,7 @@ export default function EntryClient({
   pattern="[0-9]+([.,][0-9]{1,2})?"
   placeholder="Tiempo (segundos)"
   required
-  class="block border p-2 rounded w-full"
+  className="block border p-2 rounded w-full"
 />
         <select name="category" className="block border p-2 rounded w-full">
           {categories.map((c) => (
