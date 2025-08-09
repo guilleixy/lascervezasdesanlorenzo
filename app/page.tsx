@@ -33,7 +33,9 @@ export default async function Page({ searchParams }: any) {
 
   return (
     <main className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Las cervezas de San Lorenzo</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center font-barrio">
+        Las cañas de San Lorenzo
+      </h1>
       <EntryClient initialEntries={entries} />
     </main>
   );

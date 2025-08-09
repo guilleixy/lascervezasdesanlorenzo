@@ -7,6 +7,17 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 
+import { Barrio } from "next/font/google";
+import { Inter } from "next/font/google"; // si ya usas otra fuente
+
+import "./globals.css";
+
+export const fontBarrio = Barrio({
+  weight: "400", // Barrio solo tiene este peso
+  subsets: ["latin"],
+  variable: "--font-barrio",
+});
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -36,7 +47,8 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen text-foreground bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
+          fontBarrio.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>

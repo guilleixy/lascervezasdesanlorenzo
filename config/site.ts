@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Las Cervezas de San Lorenzo",
+  name: "Las Cañas de San Lorenzo",
   description: "Viva el vino",
   navItems: [
     {
