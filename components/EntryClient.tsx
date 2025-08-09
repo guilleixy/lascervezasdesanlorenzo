@@ -103,12 +103,13 @@ export default function EntryClient({
           className="block border p-2 rounded w-full"
         />
         <input
-          type="number"
-          name="time"
-          placeholder="Tiempo (segundos)"
-          required
-          className="block border p-2 rounded w-full"
-        />
+  type="text"
+  name="time"
+  pattern="[0-9]+([.,][0-9]{1,2})?"
+  placeholder="Tiempo (segundos)"
+  required
+  class="block border p-2 rounded w-full"
+/>
         <select name="category" className="block border p-2 rounded w-full">
           {categories.map((c) => (
             <option key={c} value={c}>
