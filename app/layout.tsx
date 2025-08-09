@@ -12,7 +12,7 @@ import { Inter } from "next/font/google"; // si ya usas otra fuente
 
 import "./globals.css";
 
-export const fontBarrio = Barrio({
+const fontBarrio = Barrio({
   weight: "400", // Barrio solo tiene este peso
   subsets: ["latin"],
   variable: "--font-barrio",

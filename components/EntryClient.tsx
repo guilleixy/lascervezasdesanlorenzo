@@ -62,7 +62,7 @@ export default function EntryClient({
                   {getCategoryIcon(e.category)}
                 </span>
               )}
-              <div className="flex-1 flex flex-row items-center gap-2">
+              <div className="flex-1 flex flex-row items-center gap-2 justify-between">
                 <div>{i + 1}º</div>
                 <div className="font-semibold">{e.name}</div>
                 <div className="text-sm">{e.time}s</div>
